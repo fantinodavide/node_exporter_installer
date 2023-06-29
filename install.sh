@@ -8,3 +8,4 @@ rmdir node_exporter-*.*-amd64
 wget https://raw.githubusercontent.com/fantinodavide/node_exporter_installer/main/node_exporter.service?$RANDOM)
 mv node_exporter.service /etc/systemd/system/
 systemctl enable --now node_exporter.service
+systemctl status node_exporter.service

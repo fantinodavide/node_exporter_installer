@@ -3,7 +3,7 @@ Description=node_exporter
 
 [Service]
 WorkingDirectory=/opt/node_exporter
-ExecStart=./node_exporter
+ExecStart=/bin/bash -c ./node_exporter
 
 Type=simple
 Restart=on-failure

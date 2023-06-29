@@ -1,0 +1,14 @@
+[Unit]
+Description=node_exporter
+
+[Service]
+WorkingDirectory=/opt/node_exporter
+ExecStart=./node_exporter
+
+Type=simple
+Restart=on-failure
+RestartSec=10
+SuccessExitStatus=1
+
+[Install]
+WantedBy=multi-user.target

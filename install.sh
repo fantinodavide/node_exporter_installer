@@ -1,4 +1,8 @@
-wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.*-amd64.tar.gz
-tar xvfz node_exporter-*.*-amd64.tar.gz -C /opt/node_exporter
-rn node_exporter-*.*-amd64.tar.gz
+mkdir /opt/node_exporter
 cd /opt/node_exporter
+wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.*-amd64.tar.gz
+tar xvfz node_exporter-*.*-amd64.tar.gz -C ./
+rn node_exporter-*.*-amd64.tar.gz
+wget https://raw.githubusercontent.com/fantinodavide/node_exporter_installer/main/node_exporter.service;
+mv node_exporter.service /etc/systemd/system/
+systemctl enable --now node_exporter.service
